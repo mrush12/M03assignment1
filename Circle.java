@@ -58,3 +58,15 @@ public class Circle extends GeometricObject {
 public double getPerimeter() {
     return 2 * Math.PI * radius;
 }
+
+@Override
+    public boolean equals(GeometricObject ) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj instanceof Circle) {
+            Circle other = (Circle) obj;
+            return radius == other.radius;
+        }
+        return false;
+    }
